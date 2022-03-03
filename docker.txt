@@ -1,0 +1,6 @@
+Akash Khandare10:16 AM
+https://www.docker.com
+Akash Khandare10:38 AM
+https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+https://docs.docker.com
+docker run -d -p 8000:8000 chatapp

@@ -1,0 +1,28 @@
+  GNU nano 4.8                                           Dockerfile                                                     FROM python:3.8
+MAINTAINER priyankamore8997@gmail.com
+
+FROM python:3.8
+MAINTAINER priyankamore8997@gmail.com
+RUN apt-get upgrade -y
+
+RUN apt-get -y update
+RUN  apt-get install -y  python3-pip
+RUN  apt-get install -y default-libmysqlclient-dev
+RUN pip install --upgrade pip
+RUN pip3 install django
+RUN pip3 install virtualenv
+RUN pip3 install django-environ
+RUN  pip3 install mysqlclient
+COPY /chatapp /chatapp
+WORKDIR /chatapp
+RUN pip3 install -r requirements.txt
+ENV DATABASE_TYPE=mysql
+ENV DATABASE_NAME=chatapp
+ENV USER_NAME=admin
+ENV PASSWORD=admin123
+ENV HOST_NAME=chatapp.ckze0nlll2e9.us-east-2.rds.amazonaws.com
+ENV PORT=3306
+EXPOSE 8081
+WORKDIR /chatapp/fundoo/
+CMD python3 manage.py migrate
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8081"]

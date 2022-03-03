@@ -1,0 +1,220 @@
+#docker application deployement 
+1  sudo apt-get update
+    2  sudo apt-get install     ca-certificates     curl     gnupg     lsb-release
+    3  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+    4  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+    5    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    6  sudo apt-get update
+    7  sudo apt-get install docker-ce docker-ce-cli containerd.io
+    8  apt install git
+    9  git clone https://github.com/priyanka897-star/chatapp
+   10  ls
+   11  nano Dockerfile
+   12  ls
+   13  docker build -t  python_docker .
+   14  nano Dockerfile
+   15  docker build -t  python_docker .
+   16  nano Dockerfile
+   17  docker build -t  python_docker .
+   18  nano Dockerfile
+   19  docker build -t  python_docker .
+   20  nano Dockerfile
+   21  ls
+   22  cd chatapp
+   23  cd fundoo
+   24  ls
+   25  cd fundoo
+   26  ls
+   27  nano settings.py
+   28  cd ..
+   29  ls
+   30  docker build -t  python_docker .
+   31  docker run -it --name myconn2 python_docker
+   32  cd chatapp
+   33  cd fundoo
+   34  nano settings.py
+   35  cd ..
+   36  docker build -t  python_docker .
+   37  docker run -it --name myconn2 python_docker
+   38  docker run -it --name myconn3 python_docker
+   39  ls
+   40  nano Dockerfile
+   41  ls
+   42  pwd
+   43  nano DO
+   44  nano Dockerfile
+   45  docker build -t  python_docker .
+   46  nano Dockerfile
+   47  docker build -t  python_docker .
+   48  nano Dockerfile
+   49  ls
+   50  cd chatapp
+   51  ls
+   52  nano requirements.txt
+   53  cd ..
+   54  ls
+   55  exit
+   56  ls
+   57  nano Docker
+   58  nano Dockerfile
+   59  docker build -t  python_docker .
+   60  ls
+   61  docker build -t  python_docker .
+   62  docker start myconn8
+   63  docker run -it python_docker
+   64  python manage.py migrate
+   65  python3 manage.py migrate
+   66  cd chatapp
+   67  cd fundoo
+   68  ls
+   69  python3 manage.py migrate
+   70  source env/bin/activate
+   71  source venv/bin/activate
+   72  nano Dockerfile
+   73  docker run -it --name myconn6 python_docker
+   74  nano Dockerfile
+   75  docker run -it --name myconn6 python_docker
+   76  nano Dockerfile
+   77  docker build -t  python_docker .
+   78  docker run -it --name myconn6 python_docker
+   79  docker run -it --name myconn8 python_docker
+   80  docker  start  myconn9
+   81  docker  start  myconn8
+   82  docker run -it --name myconn8 python_docker
+   83  docker run -it --name myconn8
+   84  docker run python_docker
+   85  docker images
+   86  docker rm  ec926d993ba8
+   87  docker ps -a
+   88  docker rm mycon1
+   89  docker rm myconn2
+   90  docker rm myconn3
+   91  docker rm myconn6
+   92  docker rm myconn8
+   93  docker rm loving_bassi
+   94  docker rm musing_motalcini
+   95  docker run -it --name myconn8 python_docker
+   96  docker build -t  python_docker .
+   97  docker run -it --name mycon1 python_docker
+   98  docker start mycon1
+   99  docker run -it --name mycon1 python_docker
+  100  docker attach mycon1
+  101  ls
+  102  nano Dokcer
+  103  nano Dockerfile
+  104  docker start mycon1
+  105  docker attach mycon1
+  106  docker start mycon1
+  107  docker attach mycon1
+  108  docker build -t  python_docker .
+  109  docker run -it --name mycon2 python_docker /bin/bash
+  110  docker run -it --name mycon3 python_docker /bin/bash
+  111  ls
+  112  nano Dockerfile
+  113  docker build -t  python_docker .
+  114  docker run -it --name mycon4 python_docker /bin/bash
+  115  ls
+  116  nano Dockerfile
+  117  docker build -t  python_docker .
+  118  nano Dockerfile
+  119  docker build -t  python_docker .
+  120  docker run -it --name mycon5 python_docker /bin/bash
+  121  docker build -t  python_docker .
+  122  docker run -it --name mycon6 python_docker /bin/bash
+  123  exit
+  124  ls
+  125  nano Dockerfile
+  126  nano nginx.conf
+  127  nano Dockerfile
+  128  docker build -t  python_docker .
+  129  nano Dockerfile
+  130  docker build -t  python_docker .
+  131  nano Dockerfile
+  132  docker build -t  python_docker .
+  133  nano Dockerfile
+  134  docker build -t  python_docker .
+  135  nano Dockerfile
+  136  ls
+  137  nano Dockerfile
+  138  docker build -t  python_docker .
+  139  docker run -it --name mycon6 python_docker /bin/bash
+  140  docker run -it --name mycon7 python_docker /bin/bash
+  141  ls
+  142  nano Dockerfile
+  143  nano nginx.conf
+  144  nano Dockerfile
+  145  docker build -t  python_docker .
+  146  docker run -it --name myfinaldoc python_docker /bin/bash
+  147  docker  start myfinaldoc
+  148  docker run -it --name myfinaldoc
+  149  docker run -it --name myfinaldoc python_docker
+  150  docker run myfinaldoc python_docker
+  151  ls
+  152  docker run -it --name nginx /bin/bash
+  153  docker run -it --name nginx /bin/bash config
+  154  docker run -it --name nginx nginx_img /bin/bash
+  155  docker run -it --name nginxcon nginx_img /bin/bash
+  156  docker run -it --name nginx nginx /bin/bash
+  157  ls
+  158  whereis nginx
+  159  apt install -y nginx
+  160  ls
+  161  cp nginx.conf
+  162  cp nginx.conf /etc/nginx/sites-available/
+  163  cd /etc/nginx/sites-available/
+  164  ls
+  165  rm -rf default
+  166  ls
+  167  cat nginx.conf
+  168  ln -s /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/nginx.conf
+  169  cd /etc/nginx/sites-enabled/
+  170  ls
+  171  rm -rf default
+  172  ls
+  173  systemctl reload nginx
+  174  curl http://172.31.43.81:8000
+  175  cd ..
+  176*
+  177* docker
+  178  histroy
+  179  history
+root@ip-172-31-43-81:/home/ubuntu# exit
+
+FROM python:3.8
+MAINTAINER priyankamore8997@gmail.com
+
+#RUN mkdir $CP
+#WORKDIR $CP
+#ENV PYTHONDONTWRITEBYTECODE 1
+#ENV PYTHONUNBUFFERED 1
+
+RUN apt-get upgrade -y
+RUN apt-get -y update
+RUN  apt-get install -y  python3-pip
+RUN  apt-get install -y default-libmysqlclient-dev
+RUN pip install --upgrade pip
+RUN pip3 install django
+#RUN pip3 install virtualenv
+RUN pip3 install django-environ
+RUN  pip3 install mysqlclient
+RUN mkdir /chatapp
+COPY /chatapp  /chatapp
+WORKDIR /chatapp
+#RUN python3.8 -m venv 
+You12:38 AM
+#ENV source env/bin/activate
+RUN pip3 install -r requirements.txt
+ENV DATABASE_TYPE=mysql
+ENV DATABASE_NAME=chatapp
+ENV USER_NAME=admin
+ENV PASSWORD=admin123
+ENV HOST_NAME=chatapplication.ckze0nlll2e9.us-east-2.rds.amazonaws.com
+ENV PORT=3306
+client_loop: send disconnect: Connection reset
+WORKDIR /chatapp/fundoo/
+C:\Users\User\Downloads>
+CMD apt install gunicorn
+CMD python migrate manage.py
+CMD gunicorn --workers 3 --bind 172.31.43.81:8000 fundoo.wsgi:application
+#CMD ["python", "manage.py", "ru
+

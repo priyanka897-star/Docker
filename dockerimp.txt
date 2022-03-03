@@ -1,0 +1,4 @@
+working on docker and docker compose, write a dockerfile for an chatapp application and building it.
+Run the chatapp container in aws ec2 machine. Write docker compose file to deploy web, chatapp and DB servers.
+
+https://github.com/javahometech

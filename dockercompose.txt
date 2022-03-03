@@ -1,0 +1,53 @@
+version: "3.3"
+services:
+   mysql:
+     container_name: mysql
+     image: mysql
+     restart: always
+     environment:
+        MYSQL_USER: chatapp
+        MYSQL_DATABASE: chatapp
+        MYSQL_PASSWORD: chatapp123
+        MYSQL_ROOT_PASSWORD: "password"
+     ports:
+        - 0.0.0.0:3307:3306
+     expose:
+        - 3307
+
+     volumes:
+        - mydata: /var/lib/mysql
+     volumes:
+       - type: volume
+         source: mydata
+         target: /var/lib/mysql
+   chatapp:
+      container_name: chatapp1
+      image: python_docker
+      restart: always
+      environment:
+        DATABASE_TYPE: mysql
+        DATABASE_NAME: chatapp
+        USER_NAME: admin
+        PASSWORD: admin123
+        HOST_NAME: mysql
+        PORT: 3306
+      ports:
+         - "8081:8081"
+      depends_on:
+         - mysql
+volumes:
+   mydata:
+
+
+#setting .py
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'chatapp',
+        'USER': 'admin',
+        'PASSWORD': 'admin123',
+        'HOST': 'chatapplication.ckze0nlll2e9.us-east-2.rds.amazonaws.com',
+        'PORT': '3306',
+    }
+}
